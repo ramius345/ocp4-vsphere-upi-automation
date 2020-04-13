@@ -15,7 +15,12 @@
     pip: 
       name: pyvmomi
     become: true
-
+    
+  - name: Install file-magic for filetranspiler
+    pip:
+      name: file-magic
+    become: true
+    
   - name: Grab filetranspiler
     git:
       repo: 'https://github.com/ashcrow/filetranspiler.git'
